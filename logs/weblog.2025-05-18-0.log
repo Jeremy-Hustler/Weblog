@@ -1,0 +1,14 @@
+[TraceId: ] 2025-05-18 20:09:04.415 [main] INFO  com.jeremy.weblog.web.WeblogWebApplication - Starting WeblogWebApplication using Java 1.8.0_171 on DESKTOP-E6GOGRE with PID 5780 (E:\project\weblog\weblog-web\target\classes started by l7821 in E:\project\weblog)
+[TraceId: ] 2025-05-18 20:09:04.419 [main] INFO  com.jeremy.weblog.web.WeblogWebApplication - The following profiles are active: prod
+[TraceId: ] 2025-05-18 20:09:07.093 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[TraceId: ] 2025-05-18 20:09:07.114 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[TraceId: ] 2025-05-18 20:09:07.114 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+[TraceId: ] 2025-05-18 20:09:07.340 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[TraceId: ] 2025-05-18 20:09:07.341 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2867 ms
+[TraceId: ] 2025-05-18 20:09:08.433 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[TraceId: ] 2025-05-18 20:09:08.454 [main] INFO  com.jeremy.weblog.web.WeblogWebApplication - Started WeblogWebApplication in 4.763 seconds (JVM running for 5.744)
+[TraceId: ] 2025-05-18 20:09:09.626 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[TraceId: ] 2025-05-18 20:09:09.626 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[TraceId: ] 2025-05-18 20:09:09.627 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[TraceId: c42ae03a-bfa0-408e-bc71-f6824e17819a] 2025-05-18 20:09:09.832 [http-nio-8080-exec-1] INFO  c.j.weblog.common.aspect.ApiOperationLogAspect - ===请求开始:【以及加上注解，开始打印日志】, 入参: {"username":null,"sex":1}, 类名: TestController, 方法名: test=====
+[TraceId: c42ae03a-bfa0-408e-bc71-f6824e17819a] 2025-05-18 20:09:09.844 [http-nio-8080-exec-1] INFO  c.j.weblog.common.aspect.ApiOperationLogAspect - ===请求结束: 以及加上注解，开始打印日志, 耗时: 30, 出参: {"username":null,"sex":1}
