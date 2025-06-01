@@ -18,6 +18,13 @@ public class Response<T> implements Serializable {
         response.setMessage("响应成功！！");
         return response;
     }
+
+    public static <T> Response<T> success(T data){
+        Response response = new Response();
+        response.setMessage("响应成功！！");
+        response.setData(data);
+        return response;
+    }
     public static <T> Response<T> fail(){
         Response response = new Response();
         response.setSuccess(false);

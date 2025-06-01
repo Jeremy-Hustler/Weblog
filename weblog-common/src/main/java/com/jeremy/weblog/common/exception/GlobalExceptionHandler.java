@@ -30,16 +30,17 @@ public class GlobalExceptionHandler {
         return Response.fail(ResponseCodeEnum.SYSTEM_ERROR_CODE );
     }
 
-    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ExceptionHandler({MethodArgumentNotValidException.class})
     @ResponseBody
-    public Response handleMANVException(HttpServletRequest request, BindingResult bindingResult){
+    public Response handleMANVException(HttpServletRequest request, MethodArgumentNotValidException e){
+        BindingResult bindingResult = e.getBindingResult();
         String errorCode = ResponseCodeEnum.PARAM_NOT_VALIED.getErrorCode();
         StringBuilder sb = new StringBuilder();
+        System.out.println(bindingResult.getFieldErrors());
         Optional.ofNullable(bindingResult.getFieldErrors()).ifPresent(
                 errors -> {
                     errors.forEach(error -> sb.append(error.getField())
                             .append(" ")
-                            .append("当前值为：")
                             .append(error.getDefaultMessage())
                             .append("当前值为：")
                             .append(error.getRejectedValue()));
